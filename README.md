@@ -1,2 +1,2 @@
-# cajero Electronico
+# Cajero Electronico
 Proyecto de cajero electrónico con tres usuarios
