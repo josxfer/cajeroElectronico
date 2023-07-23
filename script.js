@@ -54,7 +54,7 @@ function consultarSaldo() {
           "mt-4",
           "block",
           "notification",
-          "is-danger"
+          "is-info"
         );
         if (validarSaldo) {
             const textoSaldo = document.createElement("p");
@@ -80,7 +80,7 @@ function ingresarMonto() {
       "mt-4",
       "block",
       "notification",
-      "is-danger"
+      "is-info"
     );
     const cajaDeDeposito = document.createElement("input");
     cajaDeDeposito.classList.add("input", "is-primary");
@@ -88,7 +88,7 @@ function ingresarMonto() {
     cajaDeDeposito.setAttribute("placeholder", "Ingresa el monto a depositar");
     ingresarDeposito.appendChild(cajaDeDeposito);
     const buttonCajaDeposito = document.createElement("button");
-    buttonCajaDeposito.classList.add("button", "is-primary", "mt-4");
+    buttonCajaDeposito.classList.add("button", "is-danger", "mt-4");
     buttonCajaDeposito.textContent = "Depositar";
     ingresarDeposito.appendChild(buttonCajaDeposito);
 
@@ -141,7 +141,7 @@ function retirarMonto() {
       "mt-4",
       "block",
       "notification",
-      "is-info"
+      "is-primary"
     );
     const cajaDeDeposito = document.createElement("input");
     cajaDeDeposito.classList.add("input", "is-primary", "mt-5");
@@ -149,7 +149,7 @@ function retirarMonto() {
     cajaDeDeposito.setAttribute("placeholder", "Ingresa el monto a retirar");
     ingresarDeposito.appendChild(cajaDeDeposito);
     const buttonCajaDeposito = document.createElement("button");
-    buttonCajaDeposito.classList.add("button", "is-primary", "mt-4");
+    buttonCajaDeposito.classList.add("button", "is-danger", "mt-4");
     buttonCajaDeposito.textContent = "Retirar";
     ingresarDeposito.appendChild(buttonCajaDeposito);
 
