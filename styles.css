@@ -1,0 +1,16 @@
+.contenedor{
+    display: flex;
+    justify-content: center;
+}
+.ocultar{
+    display: none;
+}
+.ocultar_login{
+    display: none;
+}
+.input_login{
+    display: none;
+}
+.contenedor_botones{
+    display: flex;
+}

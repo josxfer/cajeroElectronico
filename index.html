@@ -1,11 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cajero Electrónico</title>
-</head>
-<body>
-    
-</body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 class="title is-2 notification is-info">Cajero Electronico</h1>
+    <div class="entradas">
+      <div class="field">
+        <p class="control has-icons-left has-icons-right">
+          <input class="input" type="email" placeholder="Email" id="cuenta" />
+          <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fas fa-check"></i>
+          </span>
+        </p>
+      </div>
+      <div class="field">
+        <p class="control has-icons-left">
+          <input
+            class="input"
+            type="password"
+            placeholder="Password"
+            id="password"
+          />
+          <span class="icon is-small is-left">
+            <i class="fas fa-lock"></i>
+          </span>
+        </p>
+      </div>
+      <div class="control block">
+        <button onclick="iniciarSesion()" class="button is-link block">
+          Ingresar
+        </button>
+      </div>
+    </div>
+    <div class="title notification is-info ocultar" id="opciones">
+      <h2>¡Bienvenido, <span id="nombreCuenta"></span>!</h2>
+      <p class="block">Selecciona una opción:</p>
+      <div class="contenedor_botones">
+        <div class="control block mr-4">
+          <button onclick="consultarSaldo()" class="button is-danger">
+            Consultar saldo
+          </button>
+        </div>
+        <div class="control block mr-4">
+          <button onclick="ingresarMonto()" class="button is-danger">
+            Ingresar monto
+          </button>
+        </div>
+        <div class="control block mr-4">
+          <button onclick="retirarMonto()" class="button is-danger block">
+            Retirar monto
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="mt-2 block notification is-danger ocultar_login" id="login_errado">
+      <p class="block">Correo electrónico o contraseña errados</p>
+    </div>
+    <div id="ingresarDeposito" class="mt-3"></div>
+    <div id="ingresarRetiro" class="mt-3"></div>
+    <div id="mostrarSaldo"></div>
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/7345eb3262.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
